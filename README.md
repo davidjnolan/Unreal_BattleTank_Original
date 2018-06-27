@@ -10,3 +10,4 @@ This project is module 3 of the course, a simple Battle Tank game.
 ## Commits
 * BT01: Intro
 * BT02: Setting up a Github Repos
+* BT03: Landscape Setup and Scaling
