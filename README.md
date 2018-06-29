@@ -16,3 +16,4 @@ Built using Unreal Engine 4.19.2
 * BT03: Landscape Setup and Scaling
 * BT04: A Landscaping Process
 * BT05: Using Landscape Layers
+* BT06: More Landscaping Tools
