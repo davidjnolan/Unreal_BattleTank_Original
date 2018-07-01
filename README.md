@@ -17,4 +17,6 @@ Built using Unreal Engine 4.19.2
 * BT04: A Landscaping Process
 * BT05: Using Landscape Layers
 * BT06: More Landscaping Tools
-* BE07: Actors from Multiple Meshes
+* BT07: Actors from Multiple Meshes
+* BT08: Configuring a Tank
+* BT09: 3rd Person Camera Control
