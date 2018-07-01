@@ -25,3 +25,4 @@ Built using Unreal Engine 4.19.2
 * BT12: Main Menu Screens
 * BT13: UI Scale Box, Buttons & Mouse
 * BT14: Controller Ready Navigation
+* BT15: Trial Packaging Your Game
