@@ -28,3 +28,4 @@ Built using Unreal Engine 4.19.2
 * BT15: Trial Packaging Your Game
 * BT16: Delegating to Components
 * BT17: Using virtual and override
+* BT18: Creating an AI Controller Class
