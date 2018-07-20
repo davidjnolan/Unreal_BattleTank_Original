@@ -36,3 +36,5 @@ Built using Unreal Engine 4.19.2
 * BT23: Using DeprojectScreenToWorld
 * BT24: Using LineTraceSingleByChannel()
 * BT25: Unify Player & AI Aiming
+* BT26: Create Default Sub Objects in C+++
+* BT27: BlueprintCallable()
