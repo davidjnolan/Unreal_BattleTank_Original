@@ -35,3 +35,4 @@ Built using Unreal Engine 4.19.2
 * BT22: Finding Screen Pixel Coordinates
 * BT23: Using DeprojectScreenToWorld
 * BT24: Using LineTraceSingleByChannel()
+* BT25: Unify Player & AI Aiming
