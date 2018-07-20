@@ -32,3 +32,4 @@ Built using Unreal Engine 4.19.2
 * BT19: Get the Player Controller with C++
 * BT20: Add Tick() to 
 * BT21: Creating an Out Parameter Method
+* BT22: Finding Screen Pixel Coordinates
