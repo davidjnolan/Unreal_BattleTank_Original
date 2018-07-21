@@ -41,4 +41,5 @@ Built using Unreal Engine 4.19.2
 * BT28: SuggestProjectileVelocity()
 * BT29: Predict Projectile Landing Point
 * BT30: Using FRotators in Unreal
-* BT31: The C++ Compliation Process
+* BT31: Using Forward Declarations
+* BT32: BlueprintSpawnableComponent()
