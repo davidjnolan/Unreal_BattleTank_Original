@@ -7,6 +7,7 @@
 #include "TankAimingComponent.generated.h"
 
 
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class BATTLETANK_API UTankAimingComponent : public UActorComponent
 {
