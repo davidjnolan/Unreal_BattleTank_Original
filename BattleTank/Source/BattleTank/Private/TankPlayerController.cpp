@@ -25,7 +25,6 @@ void ATankPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	AimTowardCrosshair();
-
 }
 
 
@@ -42,7 +41,6 @@ void ATankPlayerController::AimTowardCrosshair()
 	if (GetSightRayHitLocation(HitLocation)) // Has "side-effect", is going to line trace
 	{
 		GetControlledTank()->AimAt(HitLocation);
-		// TODO Tell controlled Tank to aim at this point
 	}
 }
 
