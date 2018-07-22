@@ -58,18 +58,8 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 	if (bHaveAimSolution) {
 		FVector AimDirection = OutLaunchVelocity.GetSafeNormal();
 		MoveBarrelTowards(AimDirection);
-		//MoveTurretTowards(AimDirection);
-		
-		if (GetOwner()->GetName() == "Tank_BP_C_0") { // Only log if player controlled tank
-			auto Time = GetWorld()->GetTimeSeconds();
-			UE_LOG(LogTemp, Warning, TEXT("%f Aim solution found"), Time);
-		}
 	}
-	else { // If no solution 
-		if (GetOwner()->GetName() == "Tank_BP_C_0") { // Only log if player controlled tank
-			auto Time = GetWorld()->GetTimeSeconds();
-			UE_LOG(LogTemp, Warning, TEXT("%f No aim solve found"), Time);
-		}
+	else { // If no solution, do nothing
 	}
 	
 }

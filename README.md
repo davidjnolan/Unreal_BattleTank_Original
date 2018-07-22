@@ -47,3 +47,4 @@ Built using Unreal Engine 4.19.2
 * BT34: How to Report Bugs
 * BT35: Using Clamp() to Limit Values
 * BT36: Turret Rotation
+* BT37: Setting Up Projectiles
