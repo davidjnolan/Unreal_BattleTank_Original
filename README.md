@@ -45,3 +45,4 @@ Built using Unreal Engine 4.19.2
 * BT32: BlueprintSpawnableComponent()
 * BT33: Review Out Execution Flow
 * BT34: How to Report Bugs
+* BT35: Using Clamp() to Limit Values
