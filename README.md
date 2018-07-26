@@ -48,3 +48,4 @@ Built using Unreal Engine 4.19.2
 * BT35: Using Clamp() to Limit Values
 * BT36: Turret Rotation
 * BT37: Setting Up Projectiles
+* BT38: Working Round Awkward Bugs
