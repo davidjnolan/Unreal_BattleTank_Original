@@ -55,3 +55,4 @@ Built using Unreal Engine 4.19.2
 * BT42: Edit Anywhere vs EditDefaults Only
 * BT43: Adding A Quit Button
 * BT44: Setup Track Throttles
+* BT45: ApplyForceAtLocation() In Action
