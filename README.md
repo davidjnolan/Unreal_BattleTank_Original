@@ -52,3 +52,4 @@ Built using Unreal Engine 4.19.2
 * BT39: Using SpawnActor<>() to Spawn
 * BT40: Projectile Movement Components
 * BT41: Making AI Tanks Fire
+* BT42: Edit Anywhere vs EditDefaults Only
