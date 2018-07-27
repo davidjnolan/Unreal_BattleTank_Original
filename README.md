@@ -56,3 +56,4 @@ Built using Unreal Engine 4.19.2
 * BT43: Adding A Quit Button
 * BT44: Setup Track Throttles
 * BT45: ApplyForceAtLocation() In Action
+* BT46: Physics Materials and Friction
