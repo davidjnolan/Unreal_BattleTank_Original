@@ -49,3 +49,4 @@ Built using Unreal Engine 4.19.2
 * BT36: Turret Rotation
 * BT37: Setting Up Projectiles
 * BT38: Working Round Awkward Bugs
+* BT39: Using SpawnActor<>() to Spawn
