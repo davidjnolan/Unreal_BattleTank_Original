@@ -19,7 +19,7 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 	
 	
 private:
-	ATank* GetControlledTank() const;
+
 
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
@@ -42,5 +42,9 @@ private:
 
 	UPROPERTY(EditDefaultsOnly)
 	float LineTraceRange = 1000000;
+
+protected:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+	ATank* GetControlledTank() const;
 
 };

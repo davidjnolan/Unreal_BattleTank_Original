@@ -64,3 +64,5 @@ Built using Unreal Engine 4.19.2
 * BT51: Dissecting RequestDirectMove()
 * BT52: DotProduct() Vector Operator
 * BT53: CrossProduct() Vector Operator
+* BT54: Finalising Your Class Code
+* BT55: How to Use Blueprint Variables
