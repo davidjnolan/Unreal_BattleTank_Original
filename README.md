@@ -66,3 +66,4 @@ Built using Unreal Engine 4.19.2
 * BT53: CrossProduct() Vector Operator
 * BT54: Finalising Your Class Code
 * BT55: How to Use Blueprint Variables
+* BT56: Using Enum(erations) in UE4
