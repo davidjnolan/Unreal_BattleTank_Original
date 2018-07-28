@@ -60,3 +60,4 @@ Built using Unreal Engine 4.19.2
 * BT47: Using BlueprintReadOnly
 * BT48: A Better Component Architecture
 * BT49: Completing Manual Tank Movement
+* BT50: Introducing AI Pathfinding
