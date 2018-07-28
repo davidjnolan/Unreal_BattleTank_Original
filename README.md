@@ -59,3 +59,4 @@ Built using Unreal Engine 4.19.2
 * BT46: Physics Materials and Friction
 * BT47: Using BlueprintReadOnly
 * BT48: A Better Component Architecture
+* BT49: Completing Manual Tank Movement
