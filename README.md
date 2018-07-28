@@ -62,4 +62,4 @@ Built using Unreal Engine 4.19.2
 * BT49: Completing Manual Tank Movement
 * BT50: Introducing AI Pathfinding
 * BT51: Dissecting RequestDirectMove()
-
+* BT52: DotProduct() Vector Operator
