@@ -58,3 +58,4 @@ Built using Unreal Engine 4.19.2
 * BT45: ApplyForceAtLocation() In Action
 * BT46: Physics Materials and Friction
 * BT47: Using BlueprintReadOnly
+* BT48: A Better Component Architecture
