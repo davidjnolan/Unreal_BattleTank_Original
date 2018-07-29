@@ -1,10 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright PixelSpawn 2018
 
 #include "TankAIController.h"
 #include "BattleTank.h"
 #include "Tank.h"
 #include "GameFramework/Actor.h"
 #include "Engine/World.h"
+// Depends on movement component via pathfinding system
 
 void ATankAIController::BeginPlay()
 {
