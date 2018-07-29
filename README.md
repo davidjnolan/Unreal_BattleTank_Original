@@ -68,4 +68,5 @@ Built using Unreal Engine 4.19.2
 * BT55: How to Use Blueprint Variables
 * BT56: Using Enum(erations) in UE4
 * BT57: Attaching a Debugger to Unreal
-* BT58: Constructor & Begin Play Timing
+* BT58: Decoupling Your Architecture
+* BT59: BlueprintImplementableEvent
