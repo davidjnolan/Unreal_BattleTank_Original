@@ -3,12 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-
 #include "AIController.h"
 #include "TankAIController.generated.h"
-
-// Forward Declarations
-class ATank;
 
 /**
  * 
@@ -25,5 +21,4 @@ private:
 
 	// How close can the AI tank get to the player
 	float AcceptanceRadius = 3000;
-	
 };

@@ -20,7 +20,6 @@ void ATankPlayerController::Tick(float DeltaTime)
 	AimTowardCrosshair();
 }
 
-
 void ATankPlayerController::AimTowardCrosshair()
 {
 	auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
@@ -51,7 +50,6 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const
 		// Line-trace along that LookDirection and see what we hit (up to max range)
 		GetLookVectorHitLocation(LookDirection, HitLocation);
 	}
-
 	return true;
 }
 
@@ -64,7 +62,6 @@ bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& 
 		CameraWorldLocation,
 		LookDirection
 	);
-
 }
 
 bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const
@@ -85,6 +82,5 @@ bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVec
 		HitLocation = FVector(0);
 		return false; 
 	}
-	
 }
 
