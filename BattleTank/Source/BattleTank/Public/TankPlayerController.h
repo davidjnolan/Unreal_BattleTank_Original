@@ -7,7 +7,6 @@
 #include "TankPlayerController.generated.h" // Must be the last include
 
 // Forward Declarations
-class ATank;
 class UTankAimingComponent;
 
 /**
@@ -17,7 +16,6 @@ UCLASS()
 class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
 	
 private:
 	virtual void BeginPlay() override;
@@ -43,10 +41,7 @@ private:
 	float LineTraceRange = 1000000;
 
 protected:
-	UFUNCTION(BlueprintCallable, Category = "Setup")
-	ATank* GetControlledTank() const;
-
 	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
-		void FoundAimingComponent(UTankAimingComponent* AimingCompRef);
+	void FoundAimingComponent(UTankAimingComponent* AimingCompRef);
 
 };
