@@ -75,3 +75,4 @@ Built using Unreal Engine 4.19.2
 * BT62: Starting From Green
 * BT63: Aiming Without the Tank
 * BT64: Finishing Our Refactoring
+* BT65: Adding TickComponent() Back
