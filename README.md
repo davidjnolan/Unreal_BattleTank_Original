@@ -79,3 +79,4 @@ Built using Unreal Engine 4.19.2
 * BT66: Are Two Floats Equal?
 * BT67: Programmatic Sideways Friction
 * BT68: OnComponentHit Event
+* BT69: Avoiding Boolean Flags
