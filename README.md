@@ -83,3 +83,4 @@ Built using Unreal Engine 4.19.2
 * BT70: Improving Tank Aiming
 * BT71: Tweaking Tank AI
 * BT72: Making an Ammo Display
+* BT73: Making an AutoMortar
