@@ -81,3 +81,4 @@ Built using Unreal Engine 4.19.2
 * BT68: OnComponentHit Event
 * BT69: Avoiding Boolean Flags
 * BT70: Improving Tank Aiming
+* BT71: Tweaking Tank AI
