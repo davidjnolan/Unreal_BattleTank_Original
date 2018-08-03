@@ -78,3 +78,4 @@ Built using Unreal Engine 4.19.2
 * BT65: Adding TickComponent() Back
 * BT66: Are Two Floats Equal?
 * BT67: Programmatic Sideways Friction
+* BT68: OnComponentHit Event
