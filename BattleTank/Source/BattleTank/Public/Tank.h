@@ -28,4 +28,8 @@ private:
 public:
 	// Called by the engine when actor damage is dealt
 	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+	// Returns CurrentHealth as a percentage of Starting Health between 0-1
+	UFUNCTION(BlueprintPure, Category = "Health")
+	float GetHealthPercent() const;
 };
