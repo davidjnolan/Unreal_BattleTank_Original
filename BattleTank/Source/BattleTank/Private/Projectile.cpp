@@ -1,15 +1,12 @@
 // Copyright PixelSpawn 2018
 
-
+#include "Projectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Engine/World.h"
 #include "Components/StaticMeshComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "PhysicsEngine/RadialForceComponent.h"
-#include "Projectile.h"
-
-
-
+#include "Public/TimerManager.h"
 
 // Sets default values
 AProjectile::AProjectile()
@@ -56,5 +53,20 @@ void AProjectile::OnHit(UPrimitiveComponent * HitComponent, AActor * OtherActor,
 	LaunchBlast->Deactivate();
 	ImpactBlast->Activate();
 	ExplosionForce->FireImpulse();
+
+	SetRootComponent(ImpactBlast);
+	CollisionMesh->DestroyComponent();
+	
+	FTimerHandle Timer;
+	GetWorld()->GetTimerManager().SetTimer(Timer,
+										   this,
+										   &AProjectile::OnTimerExpire,
+										   DestroyDelay
+										   );
+}
+
+void AProjectile::OnTimerExpire()
+{
+	Destroy();
 }
 

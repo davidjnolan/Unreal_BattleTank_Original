@@ -90,3 +90,4 @@ Built using Unreal Engine 4.19.2
 * BT77: Particle Bounding Boxes
 * BT78: Using FAttachmentTransformRules
 * BT79: Radial Force & Caching
+* BT80: Using GetTimerManager()
