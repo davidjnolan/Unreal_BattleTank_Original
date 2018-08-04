@@ -1,6 +1,8 @@
 // Copyright PixelSpawn 2018
 
 #include "TankAIController.h"
+#include "Tank.h" // So we can implement OnDeath
+
 #include "Engine/World.h"
 #include "GameFramework/Actor.h"
 #include "BattleTank.h"
@@ -10,6 +12,23 @@
 void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
+}
+
+void ATankAIController::SetPawn(APawn * InPawn)
+{
+	Super::SetPawn(InPawn);
+	if (InPawn) {
+		auto PossessedTank = Cast<ATank>(InPawn);
+		if (!ensure(PossessedTank)) { return; }
+
+		// Subscribe out local method to the tank's death event
+		PossessedTank->OnDeath.AddUniqueDynamic(this, &ATankAIController::OnPossessedTankDeath);
+	}
+}
+
+void ATankAIController::OnPossessedTankDeath()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Recieved!"))
 }
 
 void ATankAIController::Tick(float DeltaTime)

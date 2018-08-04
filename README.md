@@ -93,3 +93,4 @@ Built using Unreal Engine 4.19.2
 * BT80: Using GetTimerManager()
 * BT81: Using TakeDamageOnActors()
 * BT82: BlueprintPure & Health Bars
+* BT83: The Observer Pattern
