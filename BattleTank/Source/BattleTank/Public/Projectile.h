@@ -25,8 +25,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly, category = "Setup")
-	float DestroyDelay = 7.0f;
+
 
 public:	
 	void LaunchProjectile(float Speed);
@@ -36,6 +35,12 @@ private:
 	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
 	void OnTimerExpire();
+
+	UPROPERTY(EditDefaultsOnly, category = "Setup")
+	float DestroyDelay = 7.0f;
+
+	UPROPERTY(EditDefaultsOnly, category = "Setup")
+	float ProjectileDamage = 20.0f;
 
 	UProjectileMovementComponent* ProjectileMovement = nullptr;
 

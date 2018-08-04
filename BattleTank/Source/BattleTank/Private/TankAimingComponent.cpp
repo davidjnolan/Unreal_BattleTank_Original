@@ -41,8 +41,6 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 		FiringState = EFiringState::Locked;
 	}
 	// TODO Handle aiming and locked states
-
-	UE_LOG(LogTemp, Warning, TEXT("%i"), RoundsLeft);
 }
 
 EFiringState UTankAimingComponent::GetFiringState() const
