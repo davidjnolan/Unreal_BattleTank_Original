@@ -94,3 +94,5 @@ Built using Unreal Engine 4.19.2
 * BT81: Using TakeDamageOnActors()
 * BT82: BlueprintPure & Health Bars
 * BT83: The Observer Pattern
+* BT84: Wrap up
+* BT85: Bonus Switching Cameras
