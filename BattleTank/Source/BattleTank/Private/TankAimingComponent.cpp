@@ -91,18 +91,26 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 
 void UTankAimingComponent::Fire()
 {
+	
 	if (FiringState == EFiringState::Locked || FiringState == EFiringState::Aiming) { 
 		// Spawn a projectile at the socket location of the barrel
 		if (!ensure(Barrel)) { return; }
 		if (!ensure(ProjectileBlueprint)) { return; }
-		auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint,
-															  Barrel->GetSocketLocation(FName("Projectile")),
-															  Barrel->GetSocketRotation(FName("Projectile"))
-															  );
-		Projectile->LaunchProjectile(LaunchSpeed);
+
+		auto BarrelSockets = Barrel->GetAllSocketNames();
+		for (int i = 0; i < BarrelSockets.Num(); i++) {
+			UE_LOG(LogTemp, Warning, TEXT("%s firing"), *BarrelSockets[i].ToString());
+			Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint,
+																  Barrel->GetSocketLocation(BarrelSockets[i]),
+																  Barrel->GetSocketRotation(BarrelSockets[i])
+																  );
+			Projectile->LaunchProjectile(LaunchSpeed);
+		};
 		LastFireTime = GetWorld()->GetTimeSeconds();
 		RoundsLeft--;
 	}
+	// TODO - figure out why 3 projectiles can't be fired at same time from 1 object
+	// Suspect it has something to do with where the start location is calculated in AimAt
 }
 
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)

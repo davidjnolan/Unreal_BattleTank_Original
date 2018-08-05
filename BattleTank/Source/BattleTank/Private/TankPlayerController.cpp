@@ -1,10 +1,14 @@
 // Copyright PixelSpawn 2018
 
 #include "TankPlayerController.h"
-#include "Engine/World.h"
-#include "GameFramework/Actor.h"
+#include "Tank.h" // So we can implement OnDeath
 #include "BattleTank.h"
 #include "TankAimingComponent.h"
+
+#include "Engine/World.h"
+#include "GameFramework/Actor.h"
+
+
 
 void ATankPlayerController::BeginPlay()
 {
@@ -14,9 +18,27 @@ void ATankPlayerController::BeginPlay()
 	FoundAimingComponent(AimingComponent);
 }
 
+void ATankPlayerController::SetPawn(APawn * InPawn)
+{
+	Super::SetPawn(InPawn);
+	if (InPawn) {
+		auto PossessedTank = Cast<ATank>(InPawn);
+		if (!ensure(PossessedTank)) { return; }
+
+		// Subscribe out local method to the tank's death event
+		PossessedTank->OnDeath.AddUniqueDynamic(this, &ATankPlayerController::OnPossessedTankDeath);
+	}
+}
+
+void ATankPlayerController::OnPossessedTankDeath()
+{
+	APlayerController::StartSpectatingOnly();
+}
+
 void ATankPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (!GetPawn()) { return; }
 	AimTowardCrosshair();
 }
 

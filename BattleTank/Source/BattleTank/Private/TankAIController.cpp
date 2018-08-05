@@ -1,4 +1,4 @@
-// Copyright PixelSpawn 2018
+	// Copyright PixelSpawn 2018
 
 #include "TankAIController.h"
 #include "Tank.h" // So we can implement OnDeath
@@ -28,12 +28,15 @@ void ATankAIController::SetPawn(APawn * InPawn)
 
 void ATankAIController::OnPossessedTankDeath()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Recieved!"))
+	if (!GetPawn()) { return; }
+	GetPawn()->DetachFromControllerPendingDestroy();
 }
 
 void ATankAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (!GetPawn()) { return; }
+	if (!GetWorld()->GetFirstPlayerController()->GetPawn()) { return; }
 
 	auto ControlledTank = GetPawn();
 	auto PlayerTank = GetWorld()->GetFirstPlayerController()->GetPawn();
