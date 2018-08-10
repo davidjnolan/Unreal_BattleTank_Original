@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "TankTrack.h"
+#include "SpawnPoint.h"
 #include "SprungWheel.h"
 
 #include "Engine/World.h"
@@ -20,9 +21,20 @@ void UTankTrack::SetThrottle(float Throttle)
 
 TArray<ASprungWheel*> UTankTrack::GetWheels() const
 {
-	TArray<ASprungWheel*> Wheels;
+	TArray<ASprungWheel*> ResultArray;
+	TArray<USceneComponent*> OUTChildren;
 
-	return TArray<ASprungWheel*>();
+	GetChildrenComponents(true, OUTChildren);
+	for (USceneComponent* Child : OUTChildren) {
+		auto SpawnPointChild = Cast<USpawnPoint>(Child);
+		if (!SpawnPointChild) continue; // Will pass and start again at beginning of for loop if not Child has not been successfully cast to USpawnPoint
+
+		auto SprungWheel = Cast<ASprungWheel>(SpawnPointChild->GetSpawnedActor());
+		if (!SprungWheel) continue;
+
+		ResultArray.Add(SprungWheel);
+	}
+	return ResultArray;
 }
 
 void UTankTrack::DriveTrack(float CurrentThrottle)
