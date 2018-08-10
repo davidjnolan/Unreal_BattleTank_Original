@@ -37,7 +37,6 @@ void ASprungWheel::BeginPlay()
 void ASprungWheel::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void ASprungWheel::SetupContraint()
@@ -58,4 +57,10 @@ void ASprungWheel::SetupContraint()
 												  NAME_None // Unrequired bone names
 	);
 }
+
+void ASprungWheel::AddDrivingForce(float ForceMagnitude)
+{
+	Wheel->AddForce(Axle->GetForwardVector() * ForceMagnitude);
+}
+
 
