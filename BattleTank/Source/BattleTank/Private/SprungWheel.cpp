@@ -1,7 +1,9 @@
 // Copyright PixelSpawn 2018
 
 #include "SprungWheel.h"
+
 #include "PhysicsEngine/PhysicsConstraintComponent.h"
+#include "Components/SphereComponent.h"
 
 
 // Sets default values
@@ -13,10 +15,14 @@ ASprungWheel::ASprungWheel()
 	MassWheelConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>(FName("MassWheelConstraint"));
 	SetRootComponent(MassWheelConstraint);
 
-	Wheel = CreateDefaultSubobject<UStaticMeshComponent>(FName("Wheel"));
-	Wheel->SetupAttachment(MassWheelConstraint);
+	Axle = CreateDefaultSubobject<USphereComponent>(FName("Axle"));
+	Axle->SetupAttachment(MassWheelConstraint);
 
+	Wheel = CreateDefaultSubobject<USphereComponent>(FName("Wheel"));
+	Wheel->SetupAttachment(Axle);
 
+	AxleWheelConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>(FName("AxleWheelConstraint"));
+	AxleWheelConstraint->SetupAttachment(Axle);
 }
 
 // Called when the game starts or when spawned
@@ -41,9 +47,15 @@ void ASprungWheel::SetupContraint()
 	if (!BodyRoot) { return; }
 
 	MassWheelConstraint->SetConstrainedComponents(BodyRoot,
-		NAME_None, // Unrequired bone names
-		Cast<UPrimitiveComponent>(Wheel),
-		NAME_None // Unrequired bone names
-		);
+												  NAME_None, // Unrequired bone names
+												  Axle,
+												  NAME_None // Unrequired bone names
+	);
+
+	AxleWheelConstraint->SetConstrainedComponents(Wheel,
+												  NAME_None, // Unrequired bone names
+												  Axle,
+												  NAME_None // Unrequired bone names
+	);
 }
 
