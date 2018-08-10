@@ -102,3 +102,4 @@ Built using Unreal Engine 4.19.2
 * BT89: Chaining Physics Constraints
 * BT90: Applying Wheel Driving Force
 * BT91: Implement GetWheels()
+* BT92: TickGroups And Physics
